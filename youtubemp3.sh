@@ -21,6 +21,15 @@ else
   echo "No se instaló el paquete youtube-dl."
 fi
 
+read -p "¿Quieres descargar el paquete smplayer ? (Y/n): " respuesta
+sleep 2
+if [ "$respuesta" == "Y" ]; then
+  sudo snap install smplayer
+  echo "Paquete smplayer instalado."
+else
+  echo "No se instaló el paquete smplayer."
+fi
+
 #Se descargará utilizando url del video en cuestión, esta parte de aquí "$1" se utiliza como un marcador de posición.
 #para cuando se ejecute se reemplace por la url del video. Evidentemente "--extract-audio" indica que se extraera el audio del video.
 #"--audio-format"  se utilizará para decidir el formato en el que se codificará el audio en este caso mp3.
