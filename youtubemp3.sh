@@ -12,6 +12,7 @@ echo " ░░░╚═╝░░░░╚════╝░░╚═════�
 #Para hacer uso del script necesitaremos descargarnos el paquete de youtube-dl, para ello preguntamos primero al usuario si lo quiere descargar.
 
 read -p "¿Quieres descargar el paquete youtube-dl? (Y/n): " respuesta
+sleep 2
 if [ "$respuesta" == "Y" ]; then
   sudo apt-get update
   sudo apt-get install youtube-dl
