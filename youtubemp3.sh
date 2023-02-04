@@ -36,3 +36,13 @@ fi
 
 youtube-dl --extract-audio --audio-format mp3 "$1"
 
+#'ls' Busca todos los archivos en el directorio actual que terminan en .mp3 y los lista en la terminal.
+# La salida de este comando se utiliza como argumento para el comando mv, que renombra el archivo MP3.
+file=$(ls *.mp3) 
+
+# Renombra el archivo MP3 con el nombre del video de YouTube
+# 'mv' se utiliza para mover un archivo a otra ubicación pero esta vez lo utilizaremos para renombrar el archivo los argumentos file y new_name son dos variables
+# que contienen el viejo y el nuevo nombre
+new_name=$(youtube-dl --get-title "$1").mp3
+mv "$file" "$new_name" 
+
