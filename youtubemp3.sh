@@ -30,11 +30,12 @@ else
   echo "No se instaló el paquete smplayer."
 fi
 
-#Para cuando se ejecute se reemplace por la url del video. Evidentemente "--extract-audio" indica que se extraera el audio del video.
+#Evidentemente "--extract-audio" indica que se extraera el audio del video.
 #"--audio-format"  se utilizará para decidir el formato en el que se codificará el audio en este caso mp3.
 
-# Preguntar al usuario el link de YouTube que desea descargar
+# Preguntamos al usuario el link de YouTube que desea descargar
 read -p "Introduce el enlace de YouTube que deseas descargar: " link
 
-# Descargar el video de YouTube como mp3
+# Descargamos el video de YouTube como mp3
 youtube-dl --extract-audio --audio-format mp3 $link
+
