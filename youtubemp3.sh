@@ -39,3 +39,11 @@ read -p "Introduce el enlace de YouTube que deseas descargar: " link
 # Descargamos el video de YouTube como mp3
 youtube-dl --extract-audio --audio-format mp3 $link
 
+read -p "¿Deseas descargar los subtítulos para el video? (y/n) " subtitulo
+sleep 1
+if [ "$subtitulo" == "y" ]; then
+  youtube-dl --write-sub --skip-download $link
+  echo "Descargando subtítulos..."
+else
+  echo "No se han instalado subtítulos"
+fi
