@@ -2,7 +2,7 @@
 
 ## Función principal del script
 	
-	Nuestro script bash sirve principalmente para descargar videos youtube en MP3
+	Nuestro script bash se utiliza principalmente para descargar videos youtube en formato MP3
 	
 
 ## Instalación
